@@ -2,42 +2,35 @@
 
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 
-function subtract(first, last){
-    let sub = ages[ages.length - 1] - ages[0];
-    return sub;
-} console.log(subtract(ages[0],ages[ages.length - 1]));
- 
+console.log(ages[ages.length - 1] - ages[0])
+ // origionally tried to make this a function which isnt needed it makes the code too complicated
 ages.push(30);
-console.log(subtract(ages[0],ages[ages.length - 1]));
+console.log(ages[ages.length - 1] - ages[0])
 ages.push(53);
-console.log(subtract(ages[0],ages[ages.length - 1]));
+console.log(ages[ages.length - 1] - ages[0])
 
-for(i = 0; i < ages.length; i++){
-    console.log(ages[i]);    
-    if (i == ages.length -1){
-        let average = ages.reduce((a, b) => a + b) / ages.length;
-console.log(average);
-    }   
-} 
+let sum = 0
+
+for (i = 0; i < ages.length; i++){
+    sum += ages[i];
+} console.log(sum / ages.length);
 
 // problem 2:
 
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 
+let totalCharacters = 0
+
 for (i = 0; i < names.length; i++){
-    console.log(names[i]);
-    if (i == names.length -1){
-        let nameAverage = names.join('').length / names.length;
-console.log(nameAverage);
-    }
-} 
-for (i = 0; i < names.length; i++){
-    console.log(names[i]);
-    if (i == names.length -1){
-        let concatenate = names.join(' ');
-        console.log(concatenate);
-    }
+    totalCharacters += names[i].length;
 }
+    console.log(totalCharacters / names.length);
+
+    let newName = "";
+for (i = 0; i < names.length; i++){
+    newName += names[i] + ' ';
+}
+console.log(newName.trim());
 
 //problem 3:
 
@@ -51,23 +44,17 @@ for (i = 0; i < names.length; i++){
 let nameLengths = [];
 
 for (i = 0; i < names.length; i++){
-    console.log(names[i])
-    if (i < names.length){
         nameLengths.push(names[i].length);
-    }
 }
 
 console.log(nameLengths);
 
 // problem 6:
+let newTotal = 0
 
 for (i = 0; i < nameLengths.length; i++){
-    console.log(nameLengths[i]);
-    if (i == nameLengths.length - 1){
-        let total = nameLengths.reduce((a,b) => a + b);
-        console.log(total);
-    } 
-}
+    newTotal += nameLengths[i];
+} console.log(newTotal)
 // problem 7:
 
 function multiplyWords(word, n){
@@ -85,15 +72,16 @@ function createFullName(firstName, LastName){
 console.log(createFullName('George', 'Lucas'));
 
 // Problem 9:
-
+let find100 = 0;
 let arr = [10, 150, 5, 15]
+
 function findGreaterThan100(array1){
-    let arraySum = array1.reduce((a,b) => a + b);
-    if (arraySum > 100){
-      return console.log("True");
-    } else {console.log('False')}
+    for(i = 0; i < array1.length; i++){
+    find100 += array1[i];
+    } if (find100 > 100) {return 'True';
+    } 
 }
-findGreaterThan100(arr);
+console.log(findGreaterThan100(arr));
 
 // problem 10:
 
