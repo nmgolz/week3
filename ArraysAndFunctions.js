@@ -78,10 +78,41 @@ function multiplyWords(word, n){
 // Problem 8:
 
 function createFullName(firstName, LastName){
-    fullName = firstName + ' ' + LastName;
+   let fullName = firstName + ' ' + LastName;
     return fullName;
 }
 
 console.log(createFullName('George', 'Lucas'));
 
 // Problem 9:
+
+let arr = [10, 150, 5, 15]
+function findGreaterThan100(array1){
+    let arraySum = array1.reduce((a,b) => a + b);
+    if (arraySum > 100){
+      return console.log("True");
+    } else {console.log('False')}
+}
+findGreaterThan100(arr);
+
+// problem 10:
+
+function findAverage(array1){
+    let arrayAvg = array1.reduce((a, b) => a + b, 0) / array1.length;
+    return arrayAvg;
+}
+
+console.log(findAverage(arr));
+
+// Problem 11:
+
+
+let arr2 = [14, 16, 12, 199]
+function findGreaterAverage(array1, array2){
+    let array1Avg = array1.reduce((a, b) => a + b, 0) / array1.length;
+    let array2Avg = array2.reduce((a, b) => a + b, 0) / array2.length;
+    if (array1Avg > array2Avg){
+        return 'true';
+    } else return 'false';
+}
+console.log(findGreaterAverage(arr2, arr));
