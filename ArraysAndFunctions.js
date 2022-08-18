@@ -3,7 +3,7 @@
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 
 function subtract(first, last){
-    let sub = ages[0] - ages[ages.length - 1]
+    let sub = ages[ages.length - 1] - ages[0];
     return sub;
 } console.log(subtract(ages[0],ages[ages.length - 1]));
  
@@ -39,7 +39,7 @@ for (i = 0; i < names.length; i++){
     }
 }
 
-//probelm 3:
+//problem 3:
 
 // this code allows you to access the last element in an array. (array.length - 1)
 
@@ -50,6 +50,38 @@ for (i = 0; i < names.length; i++){
   
 let nameLengths = [];
 
+for (i = 0; i < names.length; i++){
+    console.log(names[i])
+    if (i < names.length){
+        nameLengths.push(names[i].length);
+    }
+}
 
+console.log(nameLengths);
 
+// problem 6:
 
+for (i = 0; i < nameLengths.length; i++){
+    console.log(nameLengths[i]);
+    if (i == nameLengths.length - 1){
+        let total = nameLengths.reduce((a,b) => a + b);
+        console.log(total);
+    } 
+}
+// problem 7:
+
+function multiplyWords(word, n){
+    let multipleWords = word.repeat(n);
+    return multipleWords;
+} console.log(multiplyWords('Hello', 3));
+
+// Problem 8:
+
+function createFullName(firstName, LastName){
+    fullName = firstName + ' ' + LastName;
+    return fullName;
+}
+
+console.log(createFullName('George', 'Lucas'));
+
+// Problem 9:
