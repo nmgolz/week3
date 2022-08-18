@@ -64,8 +64,8 @@ function multiplyWords(word, n){
 
 // Problem 8:
 
-function createFullName(firstName, LastName){
-   let fullName = firstName + ' ' + LastName;
+function createFullName(firstName, lastName){
+   let fullName = firstName + ' ' + lastName;
     return fullName;
 }
 
