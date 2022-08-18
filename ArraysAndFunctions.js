@@ -105,10 +105,11 @@ let arr2 = [14, 16, 12, 199]
 function findGreaterAverage(array1, array2){
    for(i = 0; i < array1.length; i++){
     them += array1[i];
-   }
+   } let arr1Avg = them / array1.length;
    for(i = 0; i < array2.length; i++){
     that += array2[i];
-   }if (them > that){
+   } let arr2Avg = that / array2.length;
+   if (arr1Avg > arr2Avg){
     return "true"
    } else return "false"
 }
@@ -117,7 +118,7 @@ console.log(findGreaterAverage(arr2, arr));
 
 // Problem 12:
 
-let hot = true;
+let isHot = true;
 let money = 20;
 
 function willBuyDrink(isHotOutside, moneyInPocket){
@@ -126,16 +127,16 @@ function willBuyDrink(isHotOutside, moneyInPocket){
     }else return "no drink for you"
 }
 
-console.log(willBuyDrink(hot, money));
+console.log(willBuyDrink(isHot, money));
 
 
 //Problem 13:
 
-let computer = 1200;
+let computer = 1800;
 let moneyInWallet = 2000;
 
 function checkBalance(itemCost, moneyInWallet){
-    remainingMoney = moneyInWallet - itemCost;
+    let remainingMoney = moneyInWallet - itemCost;
     if(remainingMoney >= 0){
         return 'you bought the item, ' +  remainingMoney + " dollars left!";
     } else return "not enough money.";
