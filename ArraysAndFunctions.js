@@ -73,7 +73,7 @@ console.log(createFullName('George', 'Lucas'));
 
 // Problem 9:
 let find100 = 0;
-let arr = [10, 150, 5, 15]
+let arr = [10, 150, 5, 60]
 
 function findGreaterThan100(array1){
     for(i = 0; i < array1.length; i++){
@@ -85,22 +85,63 @@ console.log(findGreaterThan100(arr));
 
 // problem 10:
 
+let prob10 = 0;
 function findAverage(array1){
-    let arrayAvg = array1.reduce((a, b) => a + b, 0) / array1.length;
-    return arrayAvg;
+    for (i = 0; i < array1.length; i++){
+        prob10 += array1[i]
+    } return prob10 / array1.length;
+   
 }
 
 console.log(findAverage(arr));
 
 // Problem 11:
 
+let them = 0;
+let that = 0;
+// i know to be more descriptive with my varibles when actually using data
 
 let arr2 = [14, 16, 12, 199]
 function findGreaterAverage(array1, array2){
-    let array1Avg = array1.reduce((a, b) => a + b, 0) / array1.length;
-    let array2Avg = array2.reduce((a, b) => a + b, 0) / array2.length;
-    if (array1Avg > array2Avg){
-        return 'true';
-    } else return 'false';
+   for(i = 0; i < array1.length; i++){
+    them += array1[i];
+   }
+   for(i = 0; i < array2.length; i++){
+    that += array2[i];
+   }if (them > that){
+    return "true"
+   } else return "false"
 }
 console.log(findGreaterAverage(arr2, arr));
+
+
+// Problem 12:
+
+let hot = true;
+let money = 20;
+
+function willBuyDrink(isHotOutside, moneyInPocket){
+    if (isHotOutside == true && moneyInPocket >= 10.50){
+        return 'true';
+    }else return "no drink for you"
+}
+
+console.log(willBuyDrink(hot, money));
+
+
+//Problem 13:
+
+let computer = 1200;
+let moneyInWallet = 2000;
+
+function checkBalance(itemCost, moneyInWallet){
+    remainingMoney = moneyInWallet - itemCost;
+    if(remainingMoney >= 0){
+        return 'you bought the item, ' +  remainingMoney + " dollars left!";
+    } else return "not enough money.";
+}
+
+console.log(checkBalance(computer, moneyInWallet));
+
+// This function allow you to check if you are able to purchase and item and will tell you the remainder of money after the purchase has been made.
+// I created this because I though it would be useful to imidiately know your remaining balance after purchaseing an item. 
